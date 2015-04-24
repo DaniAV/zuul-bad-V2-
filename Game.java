@@ -126,32 +126,33 @@ public class Game
             return false;
         }
 
-        String commandWord = command.getCommandWord();
-        if (commandWord.equals("ayuda")) {
+        Option commandWord = command.getCommandWord();
+        
+        if (commandWord == Option.AYUDA) {
             printHelp();
         }
-        else if (commandWord.equals("ir")) {
+        else if (commandWord == Option.IR) {
             goRoom(command);
         }
-        else if (commandWord.equals("terminar")) {
+        else if (commandWord == Option.TERMINAR) {
             wantToQuit = quit(command);
         }
-        else if (commandWord.equals("examinar")){
+        else if (commandWord == Option.EXAMINAR){
             player.look();
         }
-        else if (commandWord.equals("comer")){
+        else if (commandWord == Option.COMER){
             player.eat();
         }
-        else if (commandWord.equals("volver")){
+        else if (commandWord == Option.VOLVER){
             player.goBack();
         }
-        else if (commandWord.equals("coger")){
+        else if (commandWord == Option.COGER){
             take(command);
         }
-        else if (commandWord.equals("soltar")){
+        else if (commandWord == Option.SOLTAR){
             drop(command);
         }
-        else if(commandWord.equals("objetos")){
+        else if(commandWord == Option.OBJETOS){
             player.showInventory();
         }
         return wantToQuit;
@@ -211,7 +212,7 @@ public class Game
     {
         if(!command.hasSecondWord()) {
             // if there is no second word, we don't know where to go...
-            System.out.println("¿Que quieres soltar");
+            System.out.println("¿Que quieres soltar?");
             return;
         }
 
