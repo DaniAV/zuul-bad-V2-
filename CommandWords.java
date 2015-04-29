@@ -22,7 +22,7 @@ public class CommandWords
     public CommandWords()
     {
         // nothing to do at the moment...
-        comands = new HashMap();
+        comands = new HashMap<>();
         comands.put("go", Option.IR);
         comands.put("quit", Option.TERMINAR);
         comands.put("help", Option.AYUDA);

@@ -7,5 +7,12 @@
  */
 public enum Option
 {
-    IR, TERMINAR, AYUDA, EXAMINAR, COMER, VOLVER, COGER, SOLTAR, OBJETOS, UNKNOW
+    IR("ir"), TERMINAR("terminar"), AYUDA("ayuda"), EXAMINAR("examinar"), COMER("comer"), VOLVER("volver"), COGER("coger"), SOLTAR("soltar"), OBJETOS("objetos"), UNKNOW("unknow");
+    
+    String comando = "";
+    Option(String comando)
+    {
+        this.comando = comando;
+    }
 }
+
